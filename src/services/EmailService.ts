@@ -8,7 +8,7 @@ interface IMailMessage {
   body: string;
   attachment?: string[]; // não é obrigatorio
 }
-// Data Tranfer Object
+// Data Transfer Object
 interface IMessageDTO {
   to: IMailTo;
   message: IMailMessage;
@@ -20,7 +20,7 @@ interface IEmailService {
 
 class EmailService implements IEmailService{
   sendMail({ to, message }: IMessageDTO) {
-    console.log(`Email Enviado para ${to.name}: ${message.subject}`); // tamplate string ` 
+    console.log(`Email Enviado para ${to.name}: ${message.subject}`); // template string ` 
   }
 }
 
